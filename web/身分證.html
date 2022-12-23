@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>身分證</title>
+  <script language="javascript">
+  var arr=new Array(10);
+  var f;
+  
+  function keyCode(event)
+  {
+   f=event.keyCode||event.which;	
+   for(var i=65;i<=72;i++)
+    if(f-i==0)
+	 f=i-55;
+   if(f-73==0)
+	f=34;
+   for(i=74;i<=78;i++)
+	if(f-i==0)
+	 f=i-56;
+   if(f-79==0)
+	f=35;
+   for(i=80;i<=86;i++)	
+	if(f-i==0)
+	 f=i-57;
+   if(f-87==0)
+	f=32;
+   for(i=88;i<=89;i++)
+	if(f-i==0)
+	 f=i-58;
+   if(f-90==0)
+	f=33;
+  }
+  function xxx(theform)
+  {
+    var x;
+	var y=0;
+    if(theform.sex[0].checked)
+	 arr[1]=1;
+   else if(theform.sex[1].checked)
+	 arr[1]=2;
+   
+   while(y<1)
+   {
+   for(var i=2;i<=9;i++)
+    arr[i]=Math.floor(Math.random()*10);
+   x=Math.floor(f/10);
+   if((x+(f%10)*9+(arr[1])*8+(arr[2])*7+(arr[3])*6+(arr[4])*5+(arr[5])*4+(arr[6])*3+(arr[7])*2+(arr[8])*1+(arr[9]))%10==0)
+    {
+	document.write("您所得到的身分證號碼為:"+document.myform.place.value);
+	  for(var j=1;j<=9;j++)
+	   document.write(arr[j]);
+	   y++;
+    }
+   else
+    y=0;
+   }
+  }
+  </script>
+ </head>
+ <body>
+ <h2>身分證製造機</h2>
+ 
+  <form name="myform">
+  地區代號:<br>A 台北市&emsp;J 新竹縣&emsp;S 高雄<br>B 台中市&emsp;K 苗栗縣&emsp;T 屏東縣<br>C 基隆市&emsp;L 台中縣&emsp;U 花蓮縣<br>D 台南市&emsp;M 南投縣&emsp;V 台東縣<br>E 高雄市&emsp;N 彰化縣&emsp;W 金門縣<br>F 台北縣&emsp;O 新竹市&emsp;X 澎湖縣<br>G 宜蘭縣&emsp;P 雲林縣&emsp;Y 陽明山<br>H 桃園縣&emsp;Q 嘉義縣&emsp;Z 連江縣<br>I 嘉義市&emsp; R 台南縣<br><br>
+  請選擇性別:<input type="radio" name="sex" value="男">男<input type="radio" name="sex" value="女">女<br><br>
+  請輸入地區代碼:<input type="text"  name="place" onkeypress="keyCode(event)"><br><br>
+  <input type="button" name="finish" value="輸入完成" onClick="xxx(document.myform)">
+  
+  </form>
+ </body>
+</html>

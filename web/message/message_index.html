@@ -1,0 +1,41 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title> 留言板</title>
+ </head>
+ <body>
+
+  <form action="message_show.php" method="post">
+   <div id="show">
+    顯示訊息<br>
+	<input type="submit" value="顯示訊息">	
+   </div>
+  </form>  
+
+  <form action="message_enter.php" method="post">
+   <div id="enter">
+     請輸入名稱:
+	 <input type="text" name="name"><br>
+   	 請輸入訊息:
+	 <input type="text" name="message"><br>
+	 <input type="submit" value="傳送">
+   </div>
+  </form>
+
+  <form action="message_delete.php" method="post">
+   <div id="delete_message">
+    請輸入欲刪除的訊息編號:
+    <input type="text" name="delete"><br>
+    <input type="submit" value="刪除">
+   </div>
+  </form>
+
+  <form action="message_search.php" method="post">
+   <div id="search">
+    請輸入想搜尋的訊息內容:
+	<input type="text" name="search"><br>
+    <input type="submit" value="搜尋">
+   </div>	
+  </form>
+ </body>
+</html>
