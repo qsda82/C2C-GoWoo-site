@@ -13,6 +13,7 @@
 ![image](https://user-images.githubusercontent.com/39626315/209256884-ca4daa95-5a26-48db-a98c-364056e8dd94.png)
 4. 訂單確認
 如果點選”確認購買”，訂購成功後，系統將自動發送訂單確認的郵件至會員當初註冊的信箱，並顯示當時註冊的會員名稱。
+
 ![image](https://user-images.githubusercontent.com/39626315/209257022-172b0a54-8bd1-4db4-bcc6-4657c54ebadf.png)
 5. 上傳頁面
 以下為商品上傳的畫面，讓會員自己輸入並選取商品種類。
